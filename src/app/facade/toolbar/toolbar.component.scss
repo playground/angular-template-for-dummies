@@ -1,0 +1,13 @@
+.fill-remaining-space {
+    // This fills the remaining space, by using flexbox. 
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+}
+
+@mixin toolbar-theme($theme) {
+    $primary: map-get($theme, primary);
+    .mat-toolbar.mat-primary {
+        background: mat-color($primary, A100);
+        color: mat-color($primary, A700);
+    }
+}

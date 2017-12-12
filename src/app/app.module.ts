@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
+import { FacadeModule } from './facade/facade.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShowcaseModule } from './showcase/showcase.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +13,9 @@ import { MaterialDesignModule } from './material-design/material-design.module';
   ],
   imports: [
     BrowserModule,
-    MaterialDesignModule
+    BrowserAnimationsModule,
+    FacadeModule,
+    ShowcaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]

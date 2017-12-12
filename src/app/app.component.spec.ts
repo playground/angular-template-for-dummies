@@ -1,12 +1,14 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
+import { HomeComponent } from './facade/home/home.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HomeComponent
       ], imports: [
         MaterialDesignModule
       ]
