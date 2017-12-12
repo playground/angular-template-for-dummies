@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/material-design/default-theme.scss";
+
+/**
+* This import allows to use Material Design Iconset offline.
+* See more info: http://google.github.io/material-design-icons/
+*/ 
+@import "./assets/material-design-icons/iconfont/material-icons.css";
