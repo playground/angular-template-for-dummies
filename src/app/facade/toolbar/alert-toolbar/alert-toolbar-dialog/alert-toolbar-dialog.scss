@@ -1,0 +1,40 @@
+@mixin alert-toolbar-dialog-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    $is-dark: map-get($theme, is-dark);
+    /**
+    * Place all component theme customizations below. NOTE: don't use hard-coded color
+    */
+    app-alert-toolbar-dialog {
+        .mat-dialog-content {
+            height: 100%;
+            max-height: 85%;
+            padding: 0 5px;
+            background: mat-color($warn, 50, 0.1);
+        }
+        .mat-card {
+            outline: none;
+            //cursor: pointer;
+            padding: 7px;
+            margin: 5px;
+            background: mat-color($warn, 0.05);
+            &:hover {
+                @include mat-elevation(10);
+            }
+        }
+        .mat-card-title {
+            font-size: 16px;
+            margin-bottom: 2px !important;
+        }
+        .mat-card-subtitle {
+            margin-bottom: 2px !important;
+        }
+        .mat-card-content {
+            max-height: 40px;
+            overflow: hidden;
+        }
+    }
+}

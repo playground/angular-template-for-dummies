@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../services/theme.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-facade',
+  templateUrl: './facade.component.html',
+  styleUrls: ['./facade.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class FacadeComponent implements OnInit {
 
   constructor(
     public themeService: ThemeService

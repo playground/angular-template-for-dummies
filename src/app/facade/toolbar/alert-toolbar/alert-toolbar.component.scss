@@ -1,0 +1,23 @@
+@import "./alert-toolbar-dialog/alert-toolbar-dialog.scss";
+
+@mixin alert-toolbar-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $warn: map-get($theme, warn);
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+    $is-dark: map-get($theme, is-dark);    
+    /**
+    * Place all component theme customizations below. NOTE: don't use hard-coded color
+    */
+    @include alert-toolbar-dialog-theme($theme);
+
+    .count {
+        font-size: 14px;
+        font-weight: bold;
+        color: mat-color($warn, 500, 0.4);
+        transform: translateX(-15px) translateY(15px);
+        width:0px;
+        display: inline-block;
+    }
+}

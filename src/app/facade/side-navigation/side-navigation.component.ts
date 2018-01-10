@@ -3,13 +3,12 @@ import { NavigationItem } from '../domain';
 import { Router, NavigationEnd } from '@angular/router';
 import { NavigationService } from '../services/navigation.service';
 import { Subscription } from 'rxjs/Subscription';
-import { NavigationItemState } from '../animation';
+
 
 @Component({
   selector: 'app-side-navigation',
   templateUrl: './side-navigation.component.html',
-  styleUrls: ['./side-navigation.component.scss'],
-  animations: [NavigationItemState]
+  styleUrls: ['./side-navigation.component.scss']
 })
 export class SideNavigationComponent implements OnInit {
 

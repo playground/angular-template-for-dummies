@@ -4,10 +4,23 @@
     flex: 1 1 auto;
 }
 
+@import "./alert-toolbar/alert-toolbar.component.scss";
+
 @mixin toolbar-theme($theme) {
+    @include alert-toolbar-theme($theme);
+
     $primary: map-get($theme, primary);
+    
     .mat-toolbar.mat-primary {
         background: mat-color($primary, A100);
         color: mat-color($primary, A700);
     }
+    .mat-icon-button {
+        outline:none !important;     
+        &:hover {
+            @include mat-elevation(2);
+        }
+    }
+
+    
 }

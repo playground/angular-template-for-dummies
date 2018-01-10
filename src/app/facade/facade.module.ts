@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeComponent } from './home/home.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { SideNavigationComponent } from './side-navigation/side-navigation.component';
 import { NavigationService } from './services/navigation.service';
 import { MaterialDesignModule } from '../material-design/material-design.module';
 import { FacadeRoutingModule } from './facade-routing.module';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
-import { ToolbarMenuComponent } from './toolbar-menu/toolbar-menu.component';
-import { SideLogoComponent } from './side-logo/side-logo.component';
 import { ThemeService } from './services/theme.service';
-import { ThemeSelectComponent } from './theme-select/theme-select.component';
 import { FormsModule } from '@angular/forms';
-import { SideActionsComponent } from './side-actions/side-actions.component';
+import { ToolbarMenuComponent } from './toolbar/toolbar-menu/toolbar-menu.component';
+import { ThemeSelectComponent } from './toolbar/theme-select/theme-select.component';
+import { SideLogoComponent } from './side-navigation/side-logo/side-logo.component';
+import { SideActionsComponent } from './side-navigation/side-actions/side-actions.component';
+import { FacadeComponent } from './facade/facade.component';
+import { AlertService } from './services/alert.service';
+import { GlobalErrorInterceptor } from './interceptors/global-error.interceptor';
+import { AlertToolbarComponent } from './toolbar/alert-toolbar/alert-toolbar.component';
+import { AlertToolbarDialog } from './toolbar/alert-toolbar/alert-toolbar-dialog/alert-toolbar-dialog';
+import { ErrorPipe } from './pipes/error.pipe';
+
 
 @NgModule({
   imports: [
@@ -22,21 +28,32 @@ import { SideActionsComponent } from './side-actions/side-actions.component';
     FacadeRoutingModule
   ],
   declarations: [
-    HomeComponent,
+    FacadeComponent,
     ToolbarComponent,
     SideNavigationComponent,
     UnderConstructionComponent,
     ToolbarMenuComponent,
     SideLogoComponent,
     ThemeSelectComponent,
-    SideActionsComponent
+    SideActionsComponent,
+    AlertToolbarComponent,
+    AlertToolbarDialog,
+    ErrorPipe
   ],
   exports: [
-    HomeComponent
+    FacadeComponent
   ],
   providers: [
     NavigationService,
-    ThemeService
+    ThemeService,
+    AlertService,
+    {
+      provide: ErrorHandler,
+      useClass: GlobalErrorInterceptor
+    }
+  ],
+  entryComponents: [
+    AlertToolbarDialog
   ]
 })
 export class FacadeModule { }

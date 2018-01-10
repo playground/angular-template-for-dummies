@@ -10,6 +10,14 @@
     .mat-expansion-panel>.mat-expanded {
         border-right: 4px solid mat-color($accent, A100);
     }
+    .mat-list-item.active {
+        background: mat-color($accent, 500, 0.3);
+    }
+    .mat-list-item {
+        :hover {
+            background: mat-color($accent, 500, 0.1);
+        }
+    }
     .mat-expansion-panel-header {
         color: mat-color($primary, A100);
         background: linear-gradient(mat-color($primary, A700, 0.2), mat-color($primary, A700, 0.3)), mat-color($primary, A100, 0.5);

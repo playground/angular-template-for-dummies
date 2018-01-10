@@ -10,7 +10,7 @@ export class ThemeService {
 
   constructor() {
     this.themeList = THEME_LIST_DATA;
-    console.log(this.themeList);
+    // console.log(this.themeList);
     this.theme = this.themeList[0];
   }
 
