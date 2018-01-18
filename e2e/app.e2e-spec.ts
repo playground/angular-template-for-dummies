@@ -9,6 +9,6 @@ describe('angular-template-for-dummies App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getCurrentPageTitle()).toContain('Overview');
   });
 });
