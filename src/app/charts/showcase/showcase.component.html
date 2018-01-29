@@ -1,0 +1,54 @@
+<h2>Showcase</h2>
+<div class="content" fxLayout="row"  fxLayoutAlign="start stretch">
+
+  <div fxFlex="1 0 500px" class="card">
+    <div class="card-header"> Title </div>
+    <div class="card-block">
+      <app-custom-charts-showcase></app-custom-charts-showcase>
+    </div>
+  </div>
+
+  <div fxFlex="1 0 900px" class="card">
+    <div class="card-header"> Title </div>
+    <div class="card-block">
+      <ngx-charts-linear-gauge [value]="60" [previousValue]="80" [min]="0" [max]="100" [units]="'alerts'">
+      </ngx-charts-linear-gauge>
+    </div>
+  </div>
+
+  <div fxFlex="1 1 900px" class="card">
+    <div class="card-header"> Title </div>
+    <div class="card-block">
+      <ngx-charts-gauge [results]="data1" [min]="0" [max]="100" [angleSpan]="240" [startAngle]="-120" [units]="'alerts'" [bigSegments]="10"
+        [smallSegments]="5">
+      </ngx-charts-gauge>
+    </div>
+  </div>
+
+  <div fxFlex="1 0 500px" class="card">
+    <div class="card-header"> Title </div>
+    <div class="card-block">
+      <ngx-charts-bar-horizontal [results]="data1" [gradient]="true" [xAxis]="true" [yAxis]="true" [legend]="true" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" xAxisLabel="xAxisLabel" yAxisLabel="yAxisLabel">
+      </ngx-charts-bar-horizontal>
+    </div>
+  </div>
+
+  <div fxFlex="1 0 600px" class="card">
+    <div class="card-header"> Title </div>
+    <div class="card-block">
+      <ngx-charts-bar-vertical [results]="data1" [gradient]="true" [xAxis]="true" [yAxis]="true" [legend]="true" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" xAxisLabel="aaa" yAxisLabel="bbb">
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
+
+  <div fxFlex="1 0 600px" class="card">
+    <div class="card-header"> Title </div>
+    <div class="card-block">
+      <ngx-charts-advanced-pie-chart [results]="data1" [gradient]="true">
+      </ngx-charts-advanced-pie-chart>
+    </div>
+  </div>
+
+</div>

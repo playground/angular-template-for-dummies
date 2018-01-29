@@ -1,0 +1,23 @@
+.content {
+    width: 100%;
+    height: 100%; //background: rgb(247, 223, 223);
+}
+
+.card {
+    position: relative;
+    padding: 10px;
+    margin: 10px; // background: lightgoldenrodyellow;
+    display: inline-grid;
+}
+
+.card-header {
+    display: block; //background: #F0A0F0
+}
+
+.card-block {
+    width: 100%;
+    height: 100%;
+    display: inline-block; //background: lightcyan;
+    min-height: 300px;
+    min-width: 600px;
+}

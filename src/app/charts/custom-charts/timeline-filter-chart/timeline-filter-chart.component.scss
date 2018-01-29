@@ -1,0 +1,20 @@
+.ngx-charts {
+    .timeline {
+        .brush-background {
+            fill: rgba(0, 0, 0, 0.01);
+        }
+        .brush {
+            .selection {
+                fill: rgba(154, 150, 190, 0.2);
+                stroke-width: 2px;
+                stroke: rgb(176, 175, 187);
+            }
+            .handle {
+                fill-opacity: 0.5;
+            }
+        }
+        .embedded-chart {
+            opacity: 0.1;
+        }
+    }
+}
