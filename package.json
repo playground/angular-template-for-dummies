@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "publish": "ng build --prod & angular-cli-ghpages -S -d dist/angular-template-for-dummies"
+    "publish": "ng build --prod --base-href \"https://makimenko.github.io/angular-template-for-dummies/\" & angular-cli-ghpages -S -d dist/angular-template-for-dummies"
   },
   "private": true,
   "dependencies": {
