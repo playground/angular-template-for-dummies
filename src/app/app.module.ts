@@ -3,15 +3,19 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ThreeExamplesModule } from './three-examples/three-examples.module';
-
-@NgModule({
+import { MaterialDesignModule } from './material-design/material-design.module';
+import { FacadeModule } from './facade/facade.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ShowcaseModule } from './showcase/showcase.module';
+import { ThreeExamplesModule } from './three-examples/three-examples.module';@NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
+    BrowserAnimationsModule,
+    FacadeModule,
+    ShowcaseModule,
     ThreeExamplesModule
   ],
   providers: [],

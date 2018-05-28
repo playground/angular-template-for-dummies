@@ -1,0 +1,6 @@
+<div>
+  <button mat-icon-button (click)="openDialog()" matTooltip="Alerts and notifications" color="{{alertService.unreadAlertCount>0?'warn':'foreground'}}">
+    <mat-icon [@alertAnimation]="alertService.unreadAlertCount" > notifications</mat-icon>
+  </button>
+  <div class="count"><span *ngIf="alertService.unreadAlertCount>0">{{alertService.unreadAlertCount}}</span></div>
+</div>

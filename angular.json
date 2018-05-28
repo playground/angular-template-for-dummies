@@ -27,7 +27,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/material-design-icons/iconfont/material-icons.css",
+              "src/app/material-design/themes.scss"
             ],
             "scripts": []
           },

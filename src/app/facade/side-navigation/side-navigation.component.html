@@ -1,0 +1,24 @@
+<app-side-logo></app-side-logo>
+
+<mat-accordion multi="false">
+    <mat-expansion-panel *ngFor="let navigationGroup of navigationService.navigationList" [expanded]="navigationService.selectedNavigationGroup == navigationGroup">
+        <mat-expansion-panel-header collapsedHeight="45px" expandedHeight="45px">
+            <mat-panel-title>
+                <mat-icon>{{navigationGroup.icon}}</mat-icon>
+            </mat-panel-title>
+            <mat-panel-description>
+                {{navigationGroup.name}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+            <mat-list-item height="45px" *ngFor="let navigationItem of navigationGroup.items" routerLink="{{navigationItem.routerLink}}"
+                (click)="onClickNavigationItem(navigationItem)"
+                [ngClass]="(isSelectedItem(navigationItem)?'active':'inactive')">
+                {{navigationItem.name}}
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-expansion-panel>
+</mat-accordion>
+
+<span fxFill></span>
+<app-side-actions></app-side-actions>

@@ -1,0 +1,16 @@
+<h1 mat-dialog-title>AdminGUI Errors and Alerts</h1>
+<div mat-dialog-content>
+
+    <mat-card *ngFor="let alert of alertService.unreadAlerts(7)" (click)="dialogRef.close()">
+        <mat-card-title>{{alert.component}}: {{alert.title}}</mat-card-title>
+        <mat-card-subtitle>{{alert.date | date : 'yyyy.MM.dd HH:mm:ss' }}</mat-card-subtitle>
+        <mat-card-content *ngIf="!alert.error">{{alert.details}}</mat-card-content>
+        <mat-card-content *ngIf="alert.error">{{alert.error| error:'rootMessage'}}</mat-card-content>
+        <mat-card-actions></mat-card-actions>
+    </mat-card>
+
+</div>
+<div mat-dialog-actions>
+    <!--<button mat-raised-button routerLink="/alert-history" (click)="dialogRef.close()" [disabled]="alertService.alerts.length==0">See all ({{alertService.alerts.length}})</button>-->
+    <button mat-raised-button (click)="alertService.markAllAsRead()" [disabled]="alertService.unreadAlertCount<=0">Mark all as read</button>
+</div>

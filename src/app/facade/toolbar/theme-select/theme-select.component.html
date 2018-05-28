@@ -1,0 +1,11 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Change Theme">
+  <mat-icon>style</mat-icon>
+</button>
+
+<mat-menu #menu="matMenu">
+  <mat-radio-group [(ngModel)]="themeService.theme">
+    <mat-radio-button *ngFor="let theme of themeService.themeList" [value]="theme">
+      <span>{{ theme.name }}</span>
+    </mat-radio-button>
+  </mat-radio-group>
+</mat-menu>
