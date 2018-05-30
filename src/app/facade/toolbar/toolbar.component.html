@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="mat-elevation-z15">
-  <button mat-icon-button matTooltip="Show/hide side navigation bar" (click)="sidenav.toggle()">
+  <button mat-icon-button matTooltip="Show/hide side navigation bar" (click)="toggleSidenav()">
     <mat-icon>view_headline</mat-icon>  
   </button>
   <span *ngIf="navigationService.selectedNavigationItem">{{navigationService.selectedNavigationItem.name}}</span>

@@ -18,4 +18,10 @@ export class ToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleSidenav() {
+    this.sidenav.toggle();
+    //TODO: resize renderer canvas
+    // window.dispatchEvent(new Event('window:resize'));
+  }
+
 }
