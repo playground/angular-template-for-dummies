@@ -1,0 +1,12 @@
+@mixin dashboard-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $foregraound: map-get($theme, foregraound);
+    $background: map-get($theme, background);
+    gridster {
+        background: mat-color($background, background) !important;
+    }
+    gridster-item {
+        background: mat-color($primary, 50, 0.9) !important;
+    }
+}

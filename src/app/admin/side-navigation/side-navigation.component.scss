@@ -1,0 +1,55 @@
+@mixin side-navigation-theme($theme) {
+    $primary: map-get($theme, primary);
+    $accent: map-get($theme, accent);
+    $foregraound: map-get($theme, foregraound);
+    .mat-drawer,
+    .mat-expansion-panel {
+        background: mat-color($primary, A700, 0.1); // #2A3F54;
+        color: mat-color($primary, A100);
+    }
+    .mat-expansion-panel>.mat-expanded {
+        border-right: 4px solid mat-color($accent, A100);
+    }
+    .mat-list-item.active {
+        background: mat-color($accent, 500, 0.3);
+    }
+    .mat-list-item {
+        :hover {
+            background: mat-color($accent, 500, 0.1);
+        }
+    }
+    .mat-expansion-panel-header {
+        color: mat-color($primary, A100);
+        background: linear-gradient(mat-color($primary, A700, 0.2), mat-color($primary, A700, 0.3)), mat-color($primary, A100, 0.5);
+        box-shadow: rgba(0, 0, 0, .25) 0 1px 0, inset rgba(255, 255, 255, .16) 0 1px 0;
+    }
+    .mat-expansion-panel-header-title,
+    .mat-expansion-panel-header-description,
+    .mat-expansion-indicator::after {
+        color: $foregraound;
+        //flex-grow: unset !important;
+    }
+    .mat-expansion-panel-header-description {
+        padding-top: 3px;
+    }
+    .mat-list .mat-list-item .mat-list-item-content,
+    .mat-nav-list .mat-list-item .mat-list-item-content,
+    .mat-selection-list .mat-list-item .mat-list-item-content {
+        height: 40px !important;
+    }
+    .mat-expansion-panel-body {
+        padding: 0 !important;
+        padding-left: 10px !important;
+        padding-bottom: 10px !important;
+    }
+    .mat-nav-list .mat-list-item {
+        // color: mat-color($primary, A100);
+        height: 40px !important;
+    }
+    
+    /*
+    .mat-list-item:active {
+        color: red !important;
+        background: red !important;
+    }*/
+}

@@ -1,4 +1,3 @@
-
 <gridster [options]="options">
   <gridster-item [item]="item" *ngFor="let item of dashboard">
     <div class="button-holder">
@@ -12,14 +11,12 @@
         <button mat-icon-button mat-raised-button class="drag-handler">
           <mat-icon>open_with</mat-icon>
         </button>
-        <button mat-icon-button mat-raised-button class="remove-button" (mousedown)="removeItem($event, item)"
-                (touchstart)="removeItem($event, item)">
+        <button mat-icon-button mat-raised-button class="remove-button" (mousedown)="removeItem($event, item)" (touchstart)="removeItem($event, item)">
           <mat-icon>delete</mat-icon>
         </button>
       </div>
       <label *ngIf="!item.hasContent">{{item.label}}</label>
-      <button mat-mini-fab *ngIf="!item.hasContent" (mousedown)="removeItem($event, item)"
-              (touchstart)="removeItem($event, item)">
+      <button mat-mini-fab *ngIf="!item.hasContent" (mousedown)="removeItem($event, item)" (touchstart)="removeItem($event, item)">
         <mat-icon>delete</mat-icon>
       </button>
     </div>

@@ -31,7 +31,11 @@
               "src/assets/material-design-icons/iconfont/material-icons.css",
               "src/app/material-design/themes.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "lazyModules": [
+              "src/app/admin/admin.module",
+              "src/app/dashboard/dashboard.module"
+            ]
           },
           "configurations": {
             "production": {

@@ -6,7 +6,7 @@ export const NAVIGATION_MENU_DATA: NavigationGroup[] = [{
     icon: "pie_chart",
     name: "Dashboards",
     items: [{
-        routerLink: "dashboard",
+        routerLink: "dashboard/sample-dashboard",
         name: "Overview"
     }, {
         routerLink: "under-construction",

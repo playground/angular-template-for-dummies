@@ -1,0 +1,8 @@
+@import "./side-navigation/side-navigation.component.scss";
+@import "./toolbar/toolbar.component.scss";
+
+@mixin admin-theme($theme) {
+    @include side-navigation-theme($theme);
+    @include toolbar-theme($theme);
+
+}

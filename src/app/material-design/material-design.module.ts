@@ -37,7 +37,6 @@ import {
 
 @NgModule({
   exports: [
-    BrowserAnimationsModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
@@ -71,4 +70,8 @@ import {
     MatStepperModule
   ]
 })
-export class MaterialDesignModule { }
+export class MaterialDesignModule {
+  constructor() {
+    console.debug(this.constructor.name);
+  }
+}
