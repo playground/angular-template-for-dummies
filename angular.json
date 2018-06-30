@@ -143,7 +143,11 @@
             "styles": [
               "projects/web-xr/src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/three/build/three.js",
+              "src/app/OBJLoader.js",
+              "src/app/MTLLoader.js"
+            ]
           },
           "configurations": {
             "production": {
